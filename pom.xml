@@ -1,0 +1,94 @@
+&lt;project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"&gt;
+  &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+  &lt;groupId&gt;com.automation&lt;/groupId&gt;
+  &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+  &lt;version&gt;1.0-SNAPSHOT&lt;/version&gt;
+  &lt;packaging&gt;jar&lt;/packaging&gt;
+
+  &lt;name&gt;automation-framework&lt;/name&gt;
+  &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+
+  &lt;properties&gt;
+    &lt;maven.compiler.source&gt;11&lt;/maven.compiler.source&gt;
+    &lt;maven.compiler.target&gt;11&lt;/maven.compiler.target&gt;
+  &lt;/properties&gt;
+
+  &lt;dependencies&gt;
+    &lt;!-- Selenium WebDriver --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.seleniumhq.selenium&lt;/groupId&gt;
+      &lt;artifactId&gt;selenium-java&lt;/artifactId&gt;
+      &lt;version&gt;4.15.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- TestNG --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.testng&lt;/groupId&gt;
+      &lt;artifactId&gt;testng&lt;/artifactId&gt;
+      &lt;version&gt;7.8.0&lt;/version&gt;
+      &lt;scope&gt;test&lt;/scope&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- SQL Server JDBC Driver --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;com.microsoft.sqlserver&lt;/groupId&gt;
+      &lt;artifactId&gt;mssql-jdbc&lt;/artifactId&gt;
+      &lt;version&gt;12.4.1.jre11&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- Apache POI for Excel data-driven testing --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;
+      &lt;artifactId&gt;poi&lt;/artifactId&gt;
+      &lt;version&gt;5.2.4&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.apache.poi&lt;/groupId&gt;
+      &lt;artifactId&gt;poi-ooxml&lt;/artifactId&gt;
+      &lt;version&gt;5.2.4&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- WebDriverManager --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;io.github.bonigarcia&lt;/groupId&gt;
+      &lt;artifactId&gt;webdrivermanager&lt;/artifactId&gt;
+      &lt;version&gt;5.5.3&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- Commons IO for file operations --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;commons-io&lt;/groupId&gt;
+      &lt;artifactId&gt;commons-io&lt;/artifactId&gt;
+      &lt;version&gt;2.11.0&lt;/version&gt;
+    &lt;/dependency&gt;
+
+    &lt;!-- SLF4J for logging --&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+      &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+      &lt;version&gt;2.0.9&lt;/version&gt;
+    &lt;/dependency&gt;
+    &lt;dependency&gt;
+      &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+      &lt;artifactId&gt;slf4j-simple&lt;/artifactId&gt;
+      &lt;version&gt;2.0.9&lt;/version&gt;
+    &lt;/dependency&gt;
+  &lt;/dependencies&gt;
+
+  &lt;build&gt;
+    &lt;plugins&gt;
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+        &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+        &lt;version&gt;3.1.2&lt;/version&gt;
+        &lt;configuration&gt;
+          &lt;suiteXmlFiles&gt;
+            &lt;suiteXmlFile&gt;testng.xml&lt;/suiteXmlFile&gt;
+          &lt;/suiteXmlFiles&gt;
+        &lt;/configuration&gt;
+      &lt;/plugin&gt;
+    &lt;/plugins&gt;
+  &lt;/build&gt;
+&lt;/project&gt;

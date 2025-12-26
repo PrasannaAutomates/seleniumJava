@@ -1,0 +1,13 @@
+&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;suite name="Automation Suite"&gt;
+  &lt;test name="Login Tests"&gt;
+    &lt;classes&gt;
+      &lt;class name="com.example.framework.tests.LoginTest"/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt;
+  &lt;test name="DB Tests"&gt;
+    &lt;classes&gt;
+      &lt;class name="com.example.framework.tests.DBTest"/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt;
+&lt;/suite&gt;
